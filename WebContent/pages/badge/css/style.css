@@ -1,0 +1,152 @@
+body {
+  background-color: #fafafa;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #7b1fa2;
+}
+::selection {
+  background-color: #ccc;
+  color: #ffffff;
+}
+
+#firstNavbar{
+    background-image: linear-gradient(to right, #00004c, #6666ff, #00004c);
+}
+
+.card {
+  min-height: 200px;
+  max-width: 300px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  background: #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+.square-badge.selected {
+  border: 2px solid #7B1FA2;
+}
+.square-badge.selected:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7B1FA2;
+  opacity: 0.2;
+}
+.square-badge .badge-cover,
+.square-badge .black-gradient-v {
+  height: 80px;
+  overflow: hidden;
+}
+.square-badge .badge-infos {
+  margin-top: -25px;
+  position: relative;
+}
+.square-badge .badge-infos .item-box--head {
+  display: inline;
+  text-align: center;
+}
+.square-badge .badge-infos .item-box--head .badge-title {
+  color: #333;
+  margin-bottom: 16px;
+}
+.square-badge .badge-infos .item-box--head .badge-title .badge-user-nick {
+  color: #999;
+}
+.square-badge .badge-infos .item-box--head .avatar {
+  margin: 0px auto;
+  border: 3px solid #fff;
+  box-sizing: content-box;
+}
+.square-badge .badge-infos .fruits-line {
+  text-align: center;
+  width: 100%;
+  padding-top: 0px;
+}
+.square-badge .badge-infos .fruits-line i.fruit {
+  width: 36px;
+  height: 36px;
+  background: #ddd;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 4px;
+}
+.square-badge .badge-infos .summary {
+  -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  justify-content: -webkit-space-around;
+  -webkit-justify-content: space-around;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0px;
+}
+.square-badge .badge-infos .summary > * {
+  padding: 10px 0px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+.square-badge .badge-infos .summary .name {
+  font-size: 13px;
+  color: #999;
+  font-weight: 100;
+}
+.square-badge .badge-infos .summary .number {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.item-box--head h6 {
+  font-weight: 600;
+  margin: 0px;
+  letter-spacing: 0;
+}
+.shadow--2dp {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.black-gradient-v {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+50,000000+100&0+50,0+100,0.65+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+  /* IE6-9 */
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.avatar {
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.avatar img {
+  width: 70px;
+}

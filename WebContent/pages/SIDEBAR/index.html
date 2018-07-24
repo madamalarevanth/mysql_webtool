@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+  
+  var request ;
+  
+  function sendInfo() {
+	
+	  var v = document.tableForm.txtNum.value; 	
+	  var url = "printTable.jsp?number="+v;
+	  
+	  if(window.XMLHttpRequest)
+		  {
+		     request= new XMLHttpRequest();
+		  }
+	  else
+			  {
+			    request= new ActiveXobject("Microsoft.XMLHTTP");
+			  }
+	  
+	  try{    
+		  request.open("GET",url,true);
+		  request.send();
+	  }
+	  catch(e){
+		  alert("someecept");
+	  }
+}
+  
+}
+
+</script>
+</head>
+<body>
+     <h3>please enter input</h3>
+     <form name="tableForm">
+     <br/>
+     enter a number:<input type="text" name="txtNum" onkeyup="sendInfo()">
+     <br/>
+
+     </form>
+     
+     <h2>table</h2>
+     
+     <span id="data"> </span>
+</body>
+</html>

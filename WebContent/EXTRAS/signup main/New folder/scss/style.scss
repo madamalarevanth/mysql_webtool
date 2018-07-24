@@ -1,0 +1,278 @@
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Vibur);
+*, *:after, *:before{
+  @include box-sizing(border-box);
+  @include transition(.3s);
+}
+$fb:#3B579D;
+$twt:#00ACED;
+$gp:#DD4A3A;
+$prime :#FE5F01;
+
+body{
+  background: url('http://fancymuch.com/wp-content/uploads/2014/01/lifestyle.jpg') no-repeat  fixed;
+  background-size: cover;
+  background-color: #008784;
+  font-family: arial;
+}
+
+.panel{
+  max-width:360px;
+  background: rgba(255,255,255,.8);
+  @include box-shadow( 2px 2px 5px rgba(0, 0, 0, 0.15));
+  margin:auto;
+  text-align: center;
+  color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0; 
+  height: 500px;
+  overflow: hidden;
+  h1{
+    font-size: 60px;
+    margin: 25px 0 15px;
+    display: inline-block;
+    width: 100%;
+    font-weight: 200;
+    color: $prime;
+   font-family: 'Vibur', cursive;
+  }
+  h4{
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color: $prime/.6;
+    border-bottom:1px solid  $prime/.5 ;
+  }
+}
+
+.btn{
+  border:1px solid $prime/1.2;
+  padding:10px;
+  @include border-radius(20px);
+  width: 100%;
+  margin-top: 15px;
+  background: $prime;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.log-form{
+  color: #fff;
+  font-weight: 100;
+  width: 40px;
+  height: 40px;
+  margin:5px ;
+  padding:0;
+  @include border-radius(25px);
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  position: relative;
+  @include transition(0s);
+  .close{
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    font-size: 22px;
+    opacity: 0;
+  }
+  .caption{
+    font-weight: 100;
+    font-size: 16px;
+    display: inline-block;
+    width: 100%;
+    min-height: 40px;
+    padding-top: 13px;
+    margin: 0;
+    position: relative;
+    margin-right: 15px; 
+    text-align: center;
+  }
+  .formset, p{
+    opacity: 0;
+    position: relative;
+     @include translateX(30px);
+    @include transition( transform .5s 1s, opacity 1s 1s);
+  }
+  p{
+   @include translateY(30px); 
+  }
+  .form-group{
+    border-color:#fff;
+    &:after{
+          background:#fff;
+     }
+     .form-label, .form-control{
+          color:#fff;
+        }
+     &.focus{
+        &:after{
+          background:#fff;
+        }
+      }
+      &.focus, &.filled {
+        .form-label{
+          color:#fff;
+        }
+      }
+  }
+  .btn{
+    background: #fff;
+    border-color:#eee;
+  }
+  &.open{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    cursor: inherit;
+    z-index: 50;
+    @include border-radius(0);
+    @include transition( width .3s .4S , height .3s .8s, border-radius 1.5s);
+    .close{
+      top: 10px;
+      opacity: .7;
+      cursor: pointer;
+      z-index: 4;
+      &:hover{
+        opacity: 1;
+        @include rotate(180deg);
+        font-size: 26px;
+        right: 12px;
+        top: 8px;
+      }
+    }
+    .caption{
+        font-size: 50px;
+        margin: 50px auto 15px;
+    }
+    .formset, p{
+      opacity: 1;
+      @include translateY(0);
+    }
+    
+  }
+  
+  
+  
+  &.twitter{
+    background: $twt;
+    .btn{
+      color: $twt;
+    }
+  }
+  
+   &.google{
+    background: $gp;
+    .btn{
+      color: $gp;
+    }
+  }
+  
+   &.facebook{
+    background: $fb;
+    .btn{
+      color: $fb;
+    }
+  }
+  
+  
+}
+.formset{
+  padding: 25px;
+  max-width: 320px;
+  margin: auto;
+}
+
+.form-group{
+  border-bottom: 1px solid $prime/.5;
+  position: relative;
+  margin-bottom: 15px;
+  &:after{
+    content:'';
+    position: absolute;
+    height:2px;
+    background: #fff;
+    width:0px;
+    left: 0;
+    right:0;
+    margin:auto;
+    bottom:-2px;
+    opacity: 0;
+    @include transition(.3s);
+  }
+  .form-control{
+    border: none;
+    height: 35px;
+    position: relative;
+    z-index: 2;
+    padding: 5px;
+    background:none;
+    color: $prime;
+    width: 100%;
+    &:focus, &:active{
+      @include box-shadow(none);
+      outline: none;
+    }
+  }
+  .form-label{
+    font-weight: 300;
+    color: $prime/.7;
+    font-size: 14px;
+    min-height: 17px;
+    text-align: left;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    right: 0;
+    @include transition(.3s);
+    z-index: 1;
+  }
+  //focus
+  &.focus{
+    &:after{
+      opacity:1;
+      width:100%;
+      background: $prime;
+    }
+  }
+  &.focus, &.filled {
+    .form-label{
+      top:-7px;
+      font-size: 10px;
+      color: $prime;
+    }
+  }
+}
+
+.ripple {
+  width: 0;
+  height: 0;
+  @include border-radius(50%);
+  background: rgba(221, 74, 58,.5);
+  @include scale(0);
+  position: absolute;
+  opacity: 1;
+}
+
+.rippleEffect {
+ @include  animation(rippleDrop .3s ease-in);
+}
+
+@include keyframes(rippleDrop){
+  to{
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

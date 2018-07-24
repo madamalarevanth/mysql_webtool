@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</style>
+</head>
+
+
+<!--NAVBAR WITHOUT LOGIN-->
+<div class="container-fluid" id="content">
+            <div class="navbar navbar-default navbar-fixed-top" style="background-color: #032027;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
+                        <a style="color: #ba8b02" class="navbar-brand" href="index.php"><h4><b>Fortrex</b></h4></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right" >
+                            <li>                              
+<!-- popup details -->
+                                    <button id="modalBtn" class="button" >Login</button>
+                                      <div id="simpleModal" class="modal">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                          	<div>                                         		
+                                          	</div>
+                                              <span class="closeBtn">&times;</span>
+                                          </div>
+                                         <div class="modal-body">
+
+  	<div class="container"> 
+    <div class="row">
+	<div class="  col-sm-5 col-xs-12 " >
+		<h2><strong> Login</strong> </h2>
+		<form method="POST" action="sign.php">
+			<div><?php //echo $_GET['total_error']; ?></div>
+						
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+							<div><?php //echo $_POST['email_error']; ?></div>
+							<div><?php// echo $_GET['exist_error']; ?></div>
+						</div>
+
+						<div class="form-group">	
+							<input type="Password" class="form-control" name="password" placeholder="Password" required="true" pattern=".{1,}">
+						</div>
+						<div>
+							<button class="btn btn-primary" type="submit" value="Submit"  name="button">Login</button>						
+						</div>
+		</form>
+		<br><p>New to Fortrex? <a href="#">Signup</a> </p>
+	</div>
+                                          			
+
+                                          		</div>
+                                          	</div>
+                                          </div>
+
+
+                                          <!-- <div class="modal-footer">
+                                            <h3>Modal Footer</h3>
+                                          </div> -->
+                                        </div>
+                                      </div>
+                            </li>
+
+                            <li>
+									<button id="modalBtn2" class="button" >Sign Up</button>
+
+                                      <div id="simpleModal2" class="modal2">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                             <h3>Hi<span class="closeBtn2 ">&times;</span></h3>
+                                          </div>
+
+
+                                          <div class="modal-body">
+
+ 	<div class="container"> 
+    <div class="row">
+    	<div class="  col-sm-5 col-xs-12 " >
+		<h2><strong> SIGN UP</strong> </h2>
+		<form method="POST" action="sign.php">
+			<div></div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" placeholder="Name" required="true" pattern=".{1,}">
+						</div>
+
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+							<div><?php //echo $_POST['email_error']; ?></div>
+							<div><?php// echo $_GET['exist_error']; ?></div>
+						</div>
+
+						<div class="form-group">	
+							<input type="Password" class="form-control" name="password" placeholder="Password" required="true" pattern=".{1,}">
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" name="contact" placeholder="Contact" required="true" pattern=".{10}">
+							<div><?php //echo $_GET['contact_error']; ?></div>
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" name="city" placeholder="City" required="true" pattern=".{1,}">
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" name="address" placeholder="Address" required="true" pattern=".{1,}">
+						</div>
+
+						<div>
+							<button class="btn btn-primary" type="submit" value="Submit"  name="button">Submit</button>						
+						</div>
+		</form>
+		<br><p>Aleady Registered? <a href="#">Login</a> </p>
+	</div>
+</div>
+</div>
+</div>
+<!-- 
+                                          <div class="modal-footer">
+                                            <h3>Modal Footer</h3>
+                                          </div> -->
+                                        </div>
+                                      </div>
+                           	</li>
+
+                           	<li>
+         <!-- IMAGE DP -->   
+         <img class="img-circle dp-Image" width="50" height="50" src="images\dp.png" alt="User Display Picture">
+                        	</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>

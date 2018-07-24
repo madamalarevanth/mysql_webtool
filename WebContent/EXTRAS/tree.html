@@ -1,0 +1,43 @@
+<html>
+<h1>Jquery expandable tree exmple</h1>
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+    <script>
+    $(function() {
+    $('div.mytree div:has(div)').addClass('parent'); 
+    $('div.mytree div').click(function() {
+        var thistree = $(this);
+        thistree.children('div').toggle();
+        thistree.filter('.parent').toggleClass('expanded');
+        return false;
+    });
+});
+</script>
+    <style>
+div.mytree div {
+ padding-left:20px;
+ background:transparent url(http://www3.telus.net/jianlu58/bullet.gif) no-repeat top left;
+}
+div.mytree div.parent div {
+ display:none;
+ cursor:default;
+}
+div.mytree div.parent {
+ cursor:pointer ;
+ background:transparent url(http://www3.telus.net/jianlu58/plus.gif) no-repeat top left;
+}
+div.mytree div.expanded {
+ background:transparent url(http://www3.telus.net/jianlu58/minus.gif) no-repeat top left;
+}</style>
+<div class="mytree" style="padding:12px;border:2px solid #ccc;">
+    <div>Top tree 1, expandable
+        <div>Second tree 2.1</div>
+        <div>Second tree 2.2, expandable
+            <div>Third tree 2.2.1</div>
+            <div>Third tree 2.2.2</div>
+            <div>Third tree 2.2.3</div>
+        </div>
+        <div>Second tree 2.3</div>
+    </div>
+  </div>   
+</html> 

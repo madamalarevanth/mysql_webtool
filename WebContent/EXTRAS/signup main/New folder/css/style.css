@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css?family=Vibur);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body {
+  background: url("http://fancymuch.com/wp-content/uploads/2014/01/lifestyle.jpg") no-repeat fixed;
+  background-size: cover;
+  background-color: #008784;
+  font-family: arial;
+}
+
+.panel {
+  max-width: 360px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 500px;
+  overflow: hidden;
+}
+.panel h1 {
+  font-size: 60px;
+  margin: 25px 0 15px;
+  display: inline-block;
+  width: 100%;
+  font-weight: 200;
+  color: #FE5F01;
+  font-family: 'Vibur', cursive;
+}
+.panel h4 {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  color: #ff9e02;
+  border-bottom: 1px solid #ffbe02;
+}
+
+.btn {
+  border: 1px solid #d44f01;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 15px;
+  background: #FE5F01;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.log-form {
+  color: #fff;
+  font-weight: 100;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  padding: 0;
+  border-radius: 25px;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  position: relative;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+.log-form .close {
+  position: absolute;
+  top: 100%;
+  right: 15px;
+  font-size: 22px;
+  opacity: 0;
+}
+.log-form .caption {
+  font-weight: 100;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+  min-height: 40px;
+  padding-top: 13px;
+  margin: 0;
+  position: relative;
+  margin-right: 15px;
+  text-align: center;
+}
+.log-form .formset, .log-form p {
+  opacity: 0;
+  position: relative;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -moz-transition: -moz-transform 0.5s 1s, opacity 1s 1s;
+  -o-transition: -o-transform 0.5s 1s, opacity 1s 1s;
+  -webkit-transition: -webkit-transform 0.5s, opacity 1s;
+  -webkit-transition-delay: 1s, 1s;
+  -webkit-transition: opacity 1s 1s, -webkit-transform 0.5s 1s;
+  transition: opacity 1s 1s, -webkit-transform 0.5s 1s;
+  transition: transform 0.5s 1s, opacity 1s 1s;
+  transition: transform 0.5s 1s, opacity 1s 1s, -webkit-transform 0.5s 1s;
+}
+.log-form p {
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+}
+.log-form .form-group {
+  border-color: #fff;
+}
+.log-form .form-group:after {
+  background: #fff;
+}
+.log-form .form-group .form-label, .log-form .form-group .form-control {
+  color: #fff;
+}
+.log-form .form-group.focus:after {
+  background: #fff;
+}
+.log-form .form-group.focus .form-label, .log-form .form-group.filled .form-label {
+  color: #fff;
+}
+.log-form .btn {
+  background: #fff;
+  border-color: #eee;
+}
+.log-form.open {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  cursor: inherit;
+  z-index: 50;
+  border-radius: 0;
+  -moz-transition: width 0.3s 0.4S, height 0.3s 0.8s, border-radius 1.5s;
+  -o-transition: width 0.3s 0.4S, height 0.3s 0.8s, border-radius 1.5s;
+  -webkit-transition: width 0.3s 0.4S, height 0.3s, border-radius 1.5s;
+  -webkit-transition-delay: 0s, 0.8s, 0s;
+  -webkit-transition: width 0.3s 0.4S, height 0.3s 0.8s, border-radius 1.5s;
+  transition: width 0.3s 0.4S, height 0.3s 0.8s, border-radius 1.5s;
+}
+.log-form.open .close {
+  top: 10px;
+  opacity: .7;
+  cursor: pointer;
+  z-index: 4;
+}
+.log-form.open .close:hover {
+  opacity: 1;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  font-size: 26px;
+  right: 12px;
+  top: 8px;
+}
+.log-form.open .caption {
+  font-size: 50px;
+  margin: 50px auto 15px;
+}
+.log-form.open .formset, .log-form.open p {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.log-form.twitter {
+  background: #00ACED;
+}
+.log-form.twitter .btn {
+  color: #00ACED;
+}
+.log-form.google {
+  background: #DD4A3A;
+}
+.log-form.google .btn {
+  color: #DD4A3A;
+}
+.log-form.facebook {
+  background: #3B579D;
+}
+.log-form.facebook .btn {
+  color: #3B579D;
+}
+
+.formset {
+  padding: 25px;
+  max-width: 320px;
+  margin: auto;
+}
+
+.form-group {
+  /*border-bottom: 1px solid #ffbe02;*/
+  position: relative;
+  margin-bottom: 15px;
+}
+.form-group:after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: #fff;
+  width: 0px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -2px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.form-group .form-control {
+  border: none;
+  height: 35px;
+  position: relative;
+  z-index: 2;
+  padding: 5px;
+  background: none;
+  color: #FE5F01;
+  width: 100%;
+}
+.form-group .form-control:focus, .form-group .form-control:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+.form-group .form-label {
+  font-weight: 300;
+  color: #ff8801;
+  font-size: 14px;
+  min-height: 17px;
+  text-align: left;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+}
+.form-group.focus:after {
+  opacity: 1;
+  width: 100%;
+  background: #FE5F01;
+}
+.form-group.focus .form-label, .form-group.filled .form-label {
+  top: -7px;
+  font-size: 10px;
+  color: #FE5F01;
+}
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(221, 74, 58, 0.5);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  position: absolute;
+  opacity: 1;
+}
+
+.rippleEffect {
+  -webkit-animation: rippleDrop 0.3s ease-in;
+  animation: rippleDrop 0.3s ease-in;
+}
+@-webkit-keyframes rippleDrop {
+  to {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes rippleDrop {
+  to {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}

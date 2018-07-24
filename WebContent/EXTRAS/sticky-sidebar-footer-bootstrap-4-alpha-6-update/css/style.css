@@ -1,0 +1,28 @@
+body {
+    flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    margin: 0px;
+}
+
+main {
+    flex: 1;
+}
+
+footer, header {
+    background-color: gray;
+    padding: 10px 0 10px 0;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    background-color: red;
+    position: sticky;
+    top: 0;
+}
+
+.sticky:before,
+.sticky:after {
+    content: '';
+    display: table;
+}
