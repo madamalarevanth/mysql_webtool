@@ -21,4 +21,4 @@ join queries
 we used ajax to display the contents in the side bar and also to perform form manipulation without the need of reloadinng the page  
 we used jsp(java server pages) in the backend coding 
 
-here are few snapshots of the project
+ few snapshots of the project have been attached please go through 
